@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Worldwide Holiday</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+<style>
+    * {
+   box-sizing: border-box; 
+  }
+  
+</style>
+  <body id="body">
+    <header id="header" style="max-width:1500px">
+        <img id="photo" src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg" alt="Me" width="1500" height="600">
+        <div class="header-title"> 
+         <h1 >WORLDWIDE HOLIDAYS</h1>
+         <h3 class="highlight">Here is a list of some of the most important worldwide holidays in the year 2023.</h3>
+        </div>
+    </header>
+    <div id="main">
+      <article>
+        <div class="form1">
+          <h4 class='center'>Search by Country</h4>
+          <form id='country-form'>
+            <input type="text" name="country" id="country" placeholder="Search Country" value="" />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
+        <!-- Table start here -->
+        <div>
+          <table id="holiday-table" class='margin' >
+            <thead class='blue'>
+              <tr class='padding'>
+                <!-- <th class='padding center'>Month</th> -->
+                <th class='padding center'>Date</th>
+                <th class='padding center'>Holiday Name</th>
+                <th class='padding center'>Holiday Type</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+          </table>
+        </div>
+        <!-- Table end here -->
+      </article>
+      <nav>
+        <div>   
+          <h4 class="title-country">Countries Available</h4>
+        </div>
+          <!-- List start here -->
+          <div id="table-responsive">
+            <div id="pre-scrollable">
+             <div id="country-list">
+              <ul id = "list">
+              </ul>
+             </div>
+            </div>
+          </div>
+          <!-- List end here -->
+      </nav>
+      <aside id="showFlag"></aside>
+    </div>
+    <footer>
+      <ul>Gabriela</ul>
+      <ul>Kulsum</ul>
+      <ul>Mae</ul
+    </footer>
+  </body>
+
+</html>
+
