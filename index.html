@@ -6,68 +6,145 @@
     <script src="./index.js"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
-<style>
+<!-- <style>
     * {
-   box-sizing: border-box; 
+   box-sizing: inherit; 
   }
   
-</style>
-  <body id="body">
-    <header id="header" style="max-width:1500px">
-        <img id="photo" src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg" alt="Me" width="1500" height="600">
-        <div class="header-title"> 
-         <h1 >WORLDWIDE HOLIDAYS</h1>
-         <h3 class="highlight">Here is a list of some of the most important worldwide holidays in the year 2023.</h3>
+</style> -->
+<!-- here start the Body -->
+<body class="w3-theme-l5">
+  <header id="header" style="max-width:1500px">
+          <img id="photo" src="https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg" alt="Me" width="1500" height="600">
+          <div class="header-title"> 
+           <h1 >WORLDWIDE HUNTER</h1>
+           <h3 class="highlight">Here is a list of some of the most important worldwide holidays in the year 2023.</h3>
+          </div>
+      </header>
+  
+  <!-- Page Container -->
+  <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+    <!-- The Grid -->
+    <div class="w3-row">
+      <!-- Left Column -->
+      <div class="w3-col m3">
+        <!-- Profile -->
+        <div class="w3-card w3-round w3-white">
+          <div class="w3-container">
+           <h4 class="w3-center">Countries Available</h4>
+           <p class="w3-center"><img src="https://img.freepik.com/free-vector/flags-globe_1057-760.jpg" class="w3-circle" style="height:206px;width:206px" alt="Avatar"></p>
+           <hr>
+           <div id="pre-scrollable">
+               <div id="country-list">
+                <ul id = "list">
+                </ul>
+               </div>
+              </div>
+          </div>
         </div>
-    </header>
-    <div id="main">
-      <article>
-        <div class="form1">
-          <h4 class='center'>Search by Country</h4>
-          <form id='country-form'>
-            <input type="text" name="country" id="country" placeholder="Search Country" value="" />
-            <input type="submit" value="Search" />
-          </form>
+        <br>
+        
+        <!-- Accordion -->
+        <div class="w3-card w3-round">
+          <div class="w3-white">
+            
+          </div>      
         </div>
-        <!-- Table start here -->
-        <div>
-          <table id="holiday-table" class='margin' >
-            <thead class='blue'>
-              <tr class='padding'>
-                <!-- <th class='padding center'>Month</th> -->
-                <th class='padding center'>Date</th>
-                <th class='padding center'>Holiday Name</th>
-                <th class='padding center'>Holiday Type</th>
-              </tr>
-            </thead>
-            <tbody id="table-body">
-            </tbody>
-          </table>
+        <br>
+        
+      <!-- End Left Column -->
+      </div>
+      
+      <!-- Middle Column -->
+      <div class="w3-col m7">
+         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <div class="form1">
+            <h4 class='center'>Search by Country</h4>
+            <form id='country-form'>
+              <input type="text" name="country" id="country" placeholder="Search Country" value="" />
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+         </div>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin "><br>
+          <h4 id="holidaysTitle"></h4>
+          <hr class="w3-clear">
+          <div>
+            <table id="holiday-table" class='w3-center' >
+              <thead class='blue'>
+                <tr class='padding'>
+                  <!-- <th class='padding center'>Month</th> -->
+                  <th class='padding center'>Date</th>
+                  <th class='padding center'>Holiday Name</th>
+                  <th class='padding center'>Holiday Type</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+              </tbody>
+            </table>
+          </div>
         </div>
-        <!-- Table end here -->
-      </article>
-      <nav>
-        <div>   
-          <h4 class="title-country">Countries Available</h4>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <h4>Next Public Holidays in United States</h4>
+          <hr class="w3-clear">
+          <p id="usHolidays">text</p>
+        </div>  
+  
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <h4>something here</h4>
+          <hr class="w3-clear">
+          <p>test</p>
         </div>
-          <!-- List start here -->
-          <div id="table-responsive">
-            <div id="pre-scrollable">
-             <div id="country-list">
-              <ul id = "list">
-              </ul>
-             </div>
+      <!-- End Middle Column -->
+      </div>
+      
+      <!-- Right Column -->
+      <div class="w3-col m2">
+        <div class="w3-card w3-round w3-white w3-center">
+          <div class="w3-container">
+            <p><strong>Countries in your area:</strong></p>
+            <p id="showFlagclose"> </p>
+          </div>
+        </div>
+        <br>
+        
+        <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+          <div class="w3-container">
+            <p><strong>Choose a Flag:</strong></p>
+            <div id="pre-scrollable2">
+            <p id="showFlag"> </p>
             </div>
           </div>
-          <!-- List end here -->
-      </nav>
-      <aside id="showFlag"></aside>
+        </div>
+        <br>
+        
+        <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+          <p><i class="fa fa-bug w3-xxlarge"></i></p>
+        </div>
+        
+      <!-- End Right Column -->
+      </div>
+      
+    <!-- End Grid -->
     </div>
-    <footer>
-      <ul>Gabriela</ul>
-      <ul>Kulsum</ul>
-      <ul>Mae</ul
-    </footer>
+    
+  <!-- End Page Container -->
+  </div>
+  <br>
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-theme-d3 w3-padding-16">
+    <h5>Footer</h5>
+    <br>
+  </footer>
+  
+  <footer class="w3-container w3-theme-d5 w3-center">
+    <p>Designed by Gabriela, Kulsum and Mae</p>
+  </footer>
+   
+  
   </body>
 
 </html>

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableBody = document.querySelector('#table-body');
   const ul = document.querySelector('#list')
   const aside = document.querySelector('#showFlag')
+  const title = document.querySelector('#holidaysTitle')
 
 
   fetch(`https://date.nager.at/api/v3/AvailableCountries`)
@@ -30,10 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     li.addEventListener('click', () => {
       //console.log(countryCode) 
       // console.log(body)  
+           title.innerHTML = '' 
+            const h4title = document.createElement('p')
+            h4title.innerHTML = `These are the 2023 holidays for ${country.name}`
+            title.append(h4title)
       fetch(`https://date.nager.at/api/v3/PublicHolidays/${year}/${countryCode}`)
         .then(resp => resp.json())
         .then(holidayData => {
           //console.log(holidayData);
+         
            tableBody.innerHTML = '' 
           holidayData.forEach(obj2 => {
             const tr = document.createElement('tr');
@@ -59,7 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = e.target.country.value
     // console.log(capitalizeFirstLetter(name.toLowerCase()));
     const Cname = capitalizeFirstLetter(name.toLowerCase());
-   
+    title.innerHTML = '' 
+    const h4title = document.createElement('p')
+    h4title.innerHTML = `These are the 2023 holidays for ${Cname}`
+    title.append(h4title)
     
     fetch(`https://date.nager.at/api/v3/AvailableCountries`)
     .then(resp => resp.json())
@@ -105,10 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
         imgFlag.height = "50"
         div.append(imgFlag);
         aside.append(div)
-
+       
       imgFlag.addEventListener('mouseover', (e) =>{
         e.target.style.cursor = 'pointer';
         // console.log(flag.name)
+        title.innerHTML = '' 
+        const h4title = document.createElement('p')
+        h4title.innerHTML = `These are the 2023 holidays for ${flag.name}`
+        title.append(h4title)
         fetch(`https://date.nager.at/api/v3/PublicHolidays/2023/${flag.countryCode}`)
         .then(resp => resp.json())
         .then(holidays => {
