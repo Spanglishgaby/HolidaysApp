@@ -28,7 +28,7 @@
             <h4 class="title-country w3-center">The world is yours</h4>
             <p class="w3-center"><img src="https://img.freepik.com/free-vector/global-travelling-abstract-concept-vector-illustration-global-insurance-world-trip-international-tourism-travel-agency-working-holiday-luxury-vacation-resort-chain-abstract-metaphor_335657-2953.jpg" class="w3-circle" style="height:206px;width:206px" alt="Avatar"></p>
             <hr>
-            <h4 class="w3-center">Choose a country from the list below:</h4>
+            <h4 class="w3-center"><strong>Choose a country from the list below:</strong></h4>
             <div id="pre-scrollable">
                 <div id="country-list">
                     <ul id = "list">
@@ -58,7 +58,7 @@
           <hr class="w3-clear">
           <div>
             <table id="holiday-table" class='w3-center' >
-              <thead class='blue'>
+              <thead>
                 <tr class='padding'>
                   <!-- <th class='padding center'>Month</th> -->
                   <th class='padding center'>Date</th>
@@ -73,29 +73,50 @@
         </div>
         
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <h4>Next Public Holidays in United States</h4>
+          <h4 id="longWeekend"></h4>
+          <h3><strong>Vacations Time!</strong></h3>
           <hr class="w3-clear">
-          <p id="usHolidays">text</p>
-        </div>  
-  
+          <div>
+            <table id="weekend-table" class='w3-center' >
+              <thead >
+                <tr class='padding'>
+                  <th class='padding center'>Days:</th>
+                  <th class='padding center'>Begins:</th>
+                  <th class='padding center'>Ends:</th>
+                </tr>
+              </thead>
+              <tbody id="table-weekend">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <h4>something here</h4>
+          <h4>Next Public Holidays in <strong>United States</strong></h4>
           <hr class="w3-clear">
-          <p>test</p>
+          <div>
+            <table id="holiday-tableUS" class='w3-center' >
+              <thead>
+                <tr class='padding'>
+                  <th class='padding center'>Date</th>
+                  <th class='padding center'>Holiday Name</th>
+                </tr>
+              </thead>
+              <tbody id="table-bodyUS">
+              </tbody>
+            </table>
+          </div>
+        </div>  
         </div>
       <!-- End Middle Column -->
       </div>
       
       <!-- Right Column -->
       <div class="w3-col m2">
-        <div class="w3-card w3-round w3-white w3-center">
-          <div class="w3-container">
-            <p><strong>Countries in your area:</strong></p>
-            <p id="showFlagclose"> </p>
-          </div>
+        <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+         <p class="photoTravel"><strong>TIME TO TRAVEL</strong><img src="https://img.freepik.com/free-photo/beautiful-collage-travel-concept_23-2149232169.jpg" class=w3-center style="height:280px;width:206px"></p>
         </div>
-        <br>
-        
+
         <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
           <div class="w3-container">
             <p><strong>Choose a Flag:</strong></p>
@@ -105,11 +126,7 @@
           </div>
         </div>
         <br>
-        
-        <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
-          <p><i class="fa fa-bug w3-xxlarge"></i></p>
-        </div>
-        
+      
       <!-- End Right Column -->
       </div>
       

@@ -62,8 +62,8 @@ h2{
   box-sizing: inherit;
 }
 .w3-theme.l5{
-  color: #000 !important;
-  background-color: #f5f7f8 !important;
+  color: #000 ;
+  background-color: #5a686f ;
 }
 .w3-col.m3, .w3-quarter {
     width: 24.99999%;
@@ -202,6 +202,61 @@ img {
   background-color: #FFC60B;
   color: #444444;
 }
+#holiday-tableUS { /*table that shows the holidays */
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #212529;
+  text-align: center;
+  border-collapse: collapse; 
+  flex: 0 0 50%;
+  position: relative;
+  margin: 20px 0px 20px 0px;
+}
+
+#holiday-tableUS td, #holiday-tableUS th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#holiday-tableUS tr:nth-child(even){background-color: #f2f2f2;}
+
+#holiday-tableUS tr:hover {background-color: #ddd;}
+
+#holiday-tableUS th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #FFC60B;
+  color: #444444;
+}
+/* Long weekends */
+#weekend-table { /*table that shows the holidays */
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #212529;
+  text-align: center;
+  border-collapse: collapse; 
+  flex: 0 0 50%;
+  position: relative;
+  margin: 20px 0px 20px 0px;
+}
+
+#weekend-table td, #weekend-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#weekend-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#weekend-table tr:hover {background-color: #ddd;}
+
+#weekend-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #FFC60B;
+  color: #444444;
+}
 footer{
   color: #FFC107;
   background-color: #26292d;
@@ -235,4 +290,19 @@ footer{
 }
 .white{
   color: #ffffff;
+}
+strong {
+  color: #7952B3
+}
+h3{
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  margin:0%
+}
+.photoTravel{
+  font: 95% Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
