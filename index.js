@@ -8,11 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const title = document.querySelector('#holidaysTitle')
 
 
+   fetch('https://date.nager.at/api/v3/NextPublicHolidays/US')
+   .then(resp => resp.json())
+   .then(nextData => { 
+    console.log(nextData)
+   })
+
   fetch(`https://date.nager.at/api/v3/AvailableCountries`)
   .then(resp => resp.json())
   .then(countryData => {  
     processCountries(countryData)
-     console.log(countryData)
+    // console.log(countryData)
   })
 
   function processCountries (countryinfo) {
@@ -122,28 +128,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const h4title = document.createElement('p')
         h4title.innerHTML = `These are the 2023 holidays for ${flag.name}`
         title.append(h4title)
-        fetch(`https://date.nager.at/api/v3/PublicHolidays/2023/${flag.countryCode}`)
-        .then(resp => resp.json())
-        .then(holidays => {
-          //console.log(holidayData);
-           tableBody.innerHTML = '' 
-          holidays.forEach(obj3 => {
-            const tr = document.createElement('tr');
-            const date = document.createElement('td');
-            date.textContent = obj3.date;
-            const name = document.createElement('td');
-            name.textContent = obj3.name;
-            const type = document.createElement('td');
-            type.textContent = obj3.types;
-            tr.append(date, name, type);
-            tableBody.append(tr);
+          fetch(`https://date.nager.at/api/v3/PublicHolidays/2023/${flag.countryCode}`)
+          .then(resp => resp.json())
+          .then(holidays => {
+            //console.log(holidayData);
+            tableBody.innerHTML = '' 
+              holidays.forEach(obj3 => {
+                const tr = document.createElement('tr');
+                const date = document.createElement('td');
+                date.textContent = obj3.date;
+                const name = document.createElement('td');
+                name.textContent = obj3.name;
+                const type = document.createElement('td');
+                type.textContent = obj3.types;
+                tr.append(date, name, type);
+                tableBody.append(tr);
+            });
           });
-        });
       })  
-        })
+    })
    })
-
-
+   
+ 
   
 
 
