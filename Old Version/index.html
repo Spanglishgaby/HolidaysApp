@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Worldwide Holiday</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+<!-- here start the Body -->
+<body class="w3-theme-l5">
+  <header class="header" >
+    <div class="header-image  ">
+      <div class="container py-5 ">
+          <h1>WORLDWIDE HUNTER</h1>
+          <h2><span class="highlight"> Here is a list of some of the most important worldwide holidays in the year 2023.</span></h2>
+      </div>
+    </div>
+  </header>
+  <!-- Page Container -->
+  <div class="w3-container w3-content" style="max-width:1400px;margin-top:20px">    
+    <!-- The Grid -->
+    <div class="w3-row">
+      <!-- Left Column -->
+      <div class="w3-col m3">
+        <!-- Profile -->
+        <div class="w3-card w3-round w3-white">
+          <div class="w3-container">
+            <h4 class="title-country w3-center">The world is yours</h4>
+            <p class="w3-center"><img src="https://img.freepik.com/free-vector/global-travelling-abstract-concept-vector-illustration-global-insurance-world-trip-international-tourism-travel-agency-working-holiday-luxury-vacation-resort-chain-abstract-metaphor_335657-2953.jpg" class="w3-circle" style="height:206px;width:206px" alt="Avatar"></p>
+            <hr>
+            <h4 class="w3-center"><strong>Choose a country from the list below:</strong></h4>
+            <div id="pre-scrollable">
+                <div id="country-list">
+                    <ul id = "list">
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <br>
+      <!-- End Left Column -->
+      </div>
+      
+      <!-- Middle Column -->
+      <div class="w3-col m7">
+         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <div class="form1">
+            <h4 class='center'>Search by Country</h4>
+            <form id='country-form'>
+              <input type="text" name="country" id="country" placeholder="Enter a country name here ..." value="" />
+              <input type="submit" value="Search" />
+            </form>
+          </div>
+         </div>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin "><br>
+          <h4 id="holidaysTitle"></h4>
+          <hr class="w3-clear">
+          <div>
+            <table id="holiday-table" class='w3-center' >
+              <thead>
+                <tr class='padding'>
+                  <!-- <th class='padding center'>Month</th> -->
+                  <th class='padding center'>Date</th>
+                  <th class='padding center'>Holiday Name</th>
+                  <th class='padding center'>Holiday Type</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <h4 id="longWeekend"></h4>
+          <h3><strong>Vacations Time!</strong></h3>
+          <hr class="w3-clear">
+          <div>
+            <table id="weekend-table" class='w3-center' >
+              <thead >
+                <tr class='padding'>
+                  <th class='padding center'>Days:</th>
+                  <th class='padding center'>Begins:</th>
+                  <th class='padding center'>Ends:</th>
+                </tr>
+              </thead>
+              <tbody id="table-weekend">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+          <h4>Next Public Holidays in <strong>United States</strong></h4>
+          <hr class="w3-clear">
+          <div>
+            <table id="holiday-tableUS" class='w3-center' >
+              <thead>
+                <tr class='padding'>
+                  <th class='padding center'>Date</th>
+                  <th class='padding center'>Holiday Name</th>
+                </tr>
+              </thead>
+              <tbody id="table-bodyUS">
+              </tbody>
+            </table>
+          </div>
+        </div>  
+        </div>
+      <!-- End Middle Column -->
+      </div>
+      
+      <!-- Right Column -->
+      <div class="w3-col m2">
+        <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+         <p class="photoTravel"><strong>TIME TO TRAVEL</strong><img src="https://img.freepik.com/free-photo/beautiful-collage-travel-concept_23-2149232169.jpg" class=w3-center style="height:280px;width:206px"></p>
+        </div>
+
+        <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+          <div class="w3-container">
+            <p><strong>Choose a Flag:</strong></p>
+            <div id="pre-scrollable2">
+            <p id="showFlag"> </p>
+            </div>
+          </div>
+        </div>
+        <br>
+      
+      <!-- End Right Column -->
+      </div>
+      
+    <!-- End Grid -->
+    </div>
+    
+  <!-- End Page Container -->
+  </div>
+  <br>
+
+
+  <!-- Footer -->
+  <footer  >
+    <div class ="logo">
+     <div class="green"> // </div>
+     FLATIRON  SCHOOL  
+    </div>
+    <h3>Phase 1 - Final Project</h3>
+    <p class ="white">Designed by Gabriela, Kulsum and Mae</p>
+  </footer>
+   
+  
+</body>
+
+</html>
+

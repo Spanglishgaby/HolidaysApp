@@ -1,155 +1,246 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Worldwide Holiday</title>
-    <script src="./index.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-<!-- here start the Body -->
-<body class="w3-theme-l5">
-  <header class="header" >
-    <div class="header-image  ">
-      <div class="container py-5 ">
-          <h1>WORLDWIDE HUNTER</h1>
-          <h2><span class="highlight"> Here is a list of some of the most important worldwide holidays in the year 2023.</span></h2>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Holidays</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- MOBILE NAV -->
+    <div class="mb-nav">
+        <div class="mb-move-item"></div>
+        <div class="mb-nav-item active">
+            <a href="#home"><i class="uil uil-home"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#countries"><i class="uil uil-plane"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#things_todo"><i class="uil uil-smile"></i></a>
+        </div>
+        <div class="mb-nav-item">
+            <a href="#weekends_mxuspe"><i class="uil uil-calendar-alt"></i></a>
+        </div>
     </div>
-  </header>
-  <!-- Page Container -->
-  <div class="w3-container w3-content" style="max-width:1400px;margin-top:20px">    
-    <!-- The Grid -->
-    <div class="w3-row">
-      <!-- Left Column -->
-      <div class="w3-col m3">
-        <!-- Profile -->
-        <div class="w3-card w3-round w3-white">
-          <div class="w3-container">
-            <h4 class="title-country w3-center">The world is yours</h4>
-            <p class="w3-center"><img src="https://img.freepik.com/free-vector/global-travelling-abstract-concept-vector-illustration-global-insurance-world-trip-international-tourism-travel-agency-working-holiday-luxury-vacation-resort-chain-abstract-metaphor_335657-2953.jpg" class="w3-circle" style="height:206px;width:206px" alt="Avatar"></p>
-            <hr>
-            <h4 class="w3-center"><strong>Choose a country from the list below:</strong></h4>
-            <div id="pre-scrollable">
-                <div id="country-list">
-                    <ul id = "list">
-                    </ul>
+    <!-- END MOBILE NAV -->
+    <!-- BACK TO TOP BTN -->
+    <a href="#home" class="back-to-top"><i class="uil uil-arrow-up"></i></a>
+    <!-- END BACK TO TOP BTN -->
+    <!-- TOP NAVIGATION -->
+    <div class="nav">
+        <div class="menu-wrap"><a href="#home"><div class="logo">Holidays</div></a>
+            <div class="menu h-xs">
+                <a href="#home"><div class="menu-item active">Home</div></a>
+                <a href="#countries"><div class="menu-item">By Country</div></a>
+                <a href="#things_todo"><div class="menu-item">Long Weekends</div></a>
+                <a href="#weekends_mxuspe"><div class="menu-item">Popular</div></a>
+            </div>
+        </div>
+    </div>
+    <!-- END TOP NAVIGATION -->
+    <!--HOME-->
+    <section id="home" class="fullheight align-items-center bg-img bg-img-fixed"
+    style="background-image: url(https://images.unsplash.com/photo-1437846972679-9e6e537be46e);">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-xs-12">
+                    <div class="slogan">
+                        <h1 class="left-to-right play-on-scroll">HOLIDAYS</h1>
+                        <h2 class="left-to-right play-on-scroll delay-2">
+                            Here is a list of some of the most important worldwide holidays in the year 2023.
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-6 col-xs-12">
+                    <div class="form1">
+                        <h4 class='center'>Find the holidays by Country</h4>
+                        <br/>
+                        <form id='country-form'>
+                            <input type="text" name="country" id="country" placeholder="Enter a country name here ..." value="" />
+                            <input type="submit" value="Search" />
+                        </form>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-        <br>
-      <!-- End Left Column -->
-      </div>
-      
-      <!-- Middle Column -->
-      <div class="w3-col m7">
-         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <div class="form1">
-            <h4 class='center'>Search by Country</h4>
-            <form id='country-form'>
-              <input type="text" name="country" id="country" placeholder="Enter a country name here ..." value="" />
-              <input type="submit" value="Search" />
-            </form>
-          </div>
-         </div>
-        
-        <div class="w3-container w3-card w3-white w3-round w3-margin "><br>
-          <h4 id="holidaysTitle"></h4>
-          <hr class="w3-clear">
-          <div>
-            <table id="holiday-table" class='w3-center' >
-              <thead>
-                <tr class='padding'>
-                  <!-- <th class='padding center'>Month</th> -->
-                  <th class='padding center'>Date</th>
-                  <th class='padding center'>Holiday Name</th>
-                  <th class='padding center'>Holiday Type</th>
-                </tr>
-              </thead>
-              <tbody id="table-body">
-              </tbody>
-            </table>
-          </div>
+    </section>
+    <!--END HOME-->
+    <!--By Country-->
+    <section class="fullheight align-items-center" id="countries"
+    style="background-image: url(https://images.unsplash.com/photo-1674754666581-4e6657392655);">
+    <div class="container">
+        <div class="country-container">
+            <h1>Are you <span class="primary-color">ready</span> to travel?</h1>
+            <br/><br/>
+                <!-- <div class="food-category"></div> -->
+                <div class="row country-wrap">
+                    <div class="col-6 col-xs-12">
+                        <h4 id="holidaysTitle"></h4>
+                        <table id="holiday-table" class="Long_weekends">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Holiday Name</th>
+                                <th>Holiday Type</th>
+                            </tr>
+                            </thead>
+                            <tbody id="table-body"></tbody>
+                        </table>
+                    </div>
+                    <div class="col-5 col-xs-12">
+                        <h4 id="longWeekend"></h4>
+                        <table id="weekend-table" class="Long_weekends">
+                            <thead>
+                            <tr>
+                                <th>Days:</th>
+                                <th>Begins:</th>
+                                <th>Ends:</th>
+                            </tr>
+                            </thead>
+                            <tbody id="table-weekend"></tbody>
+                        </table>
+                    </div>
+                </div>
         </div>
-        
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <h4 id="longWeekend"></h4>
-          <h3><strong>Vacations Time!</strong></h3>
-          <hr class="w3-clear">
-          <div>
-            <table id="weekend-table" class='w3-center' >
-              <thead >
-                <tr class='padding'>
-                  <th class='padding center'>Days:</th>
-                  <th class='padding center'>Begins:</th>
-                  <th class='padding center'>Ends:</th>
-                </tr>
-              </thead>
-              <tbody id="table-weekend">
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <h4>Next Public Holidays in <strong>United States</strong></h4>
-          <hr class="w3-clear">
-          <div>
-            <table id="holiday-tableUS" class='w3-center' >
-              <thead>
-                <tr class='padding'>
-                  <th class='padding center'>Date</th>
-                  <th class='padding center'>Holiday Name</th>
-                </tr>
-              </thead>
-              <tbody id="table-bodyUS">
-              </tbody>
-            </table>
-          </div>
-        </div>  
-        </div>
-      <!-- End Middle Column -->
-      </div>
-      
-      <!-- Right Column -->
-      <div class="w3-col m2">
-        <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
-         <p class="photoTravel"><strong>TIME TO TRAVEL</strong><img src="https://img.freepik.com/free-photo/beautiful-collage-travel-concept_23-2149232169.jpg" class=w3-center style="height:280px;width:206px"></p>
-        </div>
-
-        <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-          <div class="w3-container">
-            <p><strong>Choose a Flag:</strong></p>
-            <div id="pre-scrollable2">
-            <p id="showFlag"> </p>
+    </div>
+    </section>
+    <!--END By Country-->
+    <!--things_todo-->
+    <section class=" fullheight align-items-center bg-img bg-img-fixed" id="things_todo"
+    style="background-image: url(https://images.unsplash.com/photo-1675316045979-6fdbf556e400);">
+        <div class="container">
+            <div class="row">
+                <div class="col-7 h-xs fullwidth left-to-right play-on-scroll" id="flag"></div>
+                <div class="col-5 col-xs-12 align-items-center">
+                    <div class="things_todo right-to-left play-on-scroll">
+                        <span class="primary-color" id="info"></span>
+                        <p id="info1"></p>
+                        <p id="info2"></p>
+                        <p id="info3"></p>
+                        <p id="info4"></p>
+                        <p id="info5"></p>
+                        <p id="info6"></p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <br>
-      
-      <!-- End Right Column -->
-      </div>
-      
-    <!-- End Grid -->
-    </div>
-    
-  <!-- End Page Container -->
-  </div>
-  <br>
-
-
-  <!-- Footer -->
-  <footer  >
-    <div class ="logo">
-     <div class="green"> // </div>
-     FLATIRON  SCHOOL  
-    </div>
-    <h3>Phase 1 - Final Project</h3>
-    <p class ="white">Designed by Gabriela, Kulsum and Mae</p>
-  </footer>
-   
-  
+    </section>
+    <!--END things_todo-->
+    <!--Popular-->
+    <section class="fullheight align-items-center bg-img bg-img-fixed" id="weekends_mxuspe" 
+    style="background-image: url(https://images.unsplash.com/photo-1674676618114-354a10414d8e);">
+        <div class="container">
+            <h1 class="popular_h1 highlight">Most Popular Countries</h1>
+            <br/><br/><br/><br/>
+            <div class="row">
+                <div class="col-4 col-xs-12">
+                    <div class="popular-wrap zoom play-on-scroll delay-2">
+                        <div class="popular-content">
+                            <div class="popular-img bg-img"
+                                style="background-image: url(https://cdn.britannica.com/73/2573-004-29818847/Flag-Mexico.jpg);">
+                            </div>
+                        </div>
+                        <div class="popular-info">
+                            <h3>Mexico 2023 Holidays</h3>
+                            <table id="holiday-tableMX" class='Long_weekends' >
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Holiday Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-bodyMX">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xs-12">
+                    <div class="zoom play-on-scroll">
+                        <div class="popular-wrap active">
+                            <div class="popular-content">
+                                <div class="popular-img bg-img"
+                                    style="background-image: url(https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg);">
+                                </div>
+                            </div>
+                            <div class="popular-info">
+                                <h3>USA 2023 Holidays</h3>
+                                <table id="holiday-tableUS" class='Long_weekends' >
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Holiday Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-bodyUS">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xs-12">
+                    <div class="popular-wrap zoom play-on-scroll delay-4">
+                        <div class="popular-content">
+                            <div class="popular-img bg-img"
+                                style="background-image: url(https://cdn.britannica.com/48/3448-050-1EFC8CF3/Flag-Peru.jpg);">
+                            </div>
+                        </div>
+                        <div class="popular-info">
+                            <h3>Peru 2023 Holidays</h3>
+                            <table id="holiday-tablePE" class='Long_weekends' >
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Holiday Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-bodyPE">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END Popular-->
+    <!--FOOTER-->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-xs-12">
+                    <h1>Holidays</h1>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quas harum? Atque eius
+                        quaerat fuga sint molestiae illo corrupti vitae voluptatibus. Dicta rerum est delectus
+                        perspiciatis nemo nihil autem! Doloremque?</p>
+                    <br>
+                </div>
+                <div class="col-2 col-xs-12">
+                    <h1>Explore</h1>
+                    <br>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#things_todo">Long Weekends</a></p>
+                    <p><a href="#countries">All Countries</a></p>
+                    <p><a href="#weekends_mxuspe">Favorites</a></p>
+                </div>
+                <div class="col-4 col-xs-12">
+                    <h1>Media</h1>
+                    <br>
+                    <a href="#countries"><div class="footer-item"><i class="uil uil-github-alt"></i> GitHub Repo</div></a>
+                    <a href="#weekends_mxuspe"><div class="footer-item"><i class="uil uil-window"></i> Demo</div></a>
+                </div>
+            </div>
+            <p class="footer_copy">&#169; Gabriela Arnott, All right reserved</p>
+        </div>
+    </section>
+    <!--END FOOTER-->
+    <script src="index.js"></script>
 </body>
-
 </html>
-
