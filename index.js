@@ -106,6 +106,7 @@ const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 const targetSection = document.querySelector('#countries');
 
 
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -176,7 +177,7 @@ form.addEventListener('submit', (e) => {
         const languages = data[0].languages;
         let languageList = '';
         Object.entries(languages).forEach(([key, value]) => {
-            languageList += `<li>${key}: ${value}</li>`;
+            languageList += `<li>${value}</li>`;
         });
         const maps = data[0].maps.googleMaps;
         const flag = data[0].flags.png;
@@ -192,12 +193,12 @@ form.addEventListener('submit', (e) => {
         const flagImg = document.querySelector("#flag");
 
         info.innerHTML = `<h3>${officialName}</h3>`;
-        info1.innerHTML = `<p> Continent: ${continent}</p>`;
-        info2.innerHTML = `<p> Capital: ${capital}</p>`;
-        info3.innerHTML = `<p> Population ${population}</p>`;
-        info4.innerHTML = `<p> Timezones: ${timezones}</p>`;
-        info5.innerHTML = `<ul>Languages: ${languageList}</ul>`;
-        info6.innerHTML = `<p><a href="${maps}" target="_blank">Google Maps</a></p>`;
+        info1.innerHTML = `<strong class="primary-color"><p> Continent:</strong> ${continent}</p>`;
+        info2.innerHTML = `<strong class="primary-color"><p> Capital:</strong>  ${capital}</p>`;
+        info3.innerHTML = `<strong class="primary-color"><p> Population:</strong>  ${population}</p>`;
+        info4.innerHTML = `<strong class="primary-color"><p> Timezones:</strong>  ${timezones}</p>`;
+        info5.innerHTML = `<strong class="primary-color"><ul style="list-style: none;">Languages:</strong>  ${languageList}</ul>`;
+        info6.innerHTML = `<strong class="primary-color"><p><a href="${maps}" target="_blank">Explore this country in Google Maps</a></p></strong> `;
         flagImg.innerHTML = `<img src="${flag}" alt="Flag">`;
     });
 
@@ -205,3 +206,9 @@ form.addEventListener('submit', (e) => {
 targetSection.scrollIntoView({ behavior: 'smooth' });
 form.reset();
 })
+
+
+  
+document.querySelector('.country-button').addEventListener('click', function() {
+    location.href = "#things_todo";
+});

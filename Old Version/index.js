@@ -326,7 +326,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const div = document.createElement('div');
         div.id = "printFlag"
         const imgFlag = document.createElement('img');
-        imgFlag.src =`https://countryflagsapi.com/png/${flag.name}`
+        console.log(flag.name)
+        imgFlag.src =`https://countryflagsapi.com/png/${flag.name.toLowerCase()}`
         imgFlag.alt = flag.name;
         imgFlag.width = "100"
         imgFlag.height = "50"
